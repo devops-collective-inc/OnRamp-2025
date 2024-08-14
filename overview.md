@@ -22,24 +22,25 @@ practices.
 
 - **Structured Curriculum:**
 
-Participants in the OnRamp Program benefit from a meticulously designed and comprehensive curriculum
-that covers the fundamentals of PowerShell scripting and DevOps methodologies. The program spans
-from basic scripting techniques to advanced concepts such as continuous integration and deployment,
-ensuring attendees gain a thorough and practical skill set, ready to tackle real-world challenges.
+  Participants in the OnRamp Program benefit from a meticulously designed and comprehensive
+  curriculum that covers the fundamentals of PowerShell scripting and DevOps methodologies. The
+  program spans from basic scripting techniques to advanced concepts such as continuous integration
+  and deployment, ensuring attendees gain a thorough and practical skill set, ready to tackle
+  real-world challenges.
 
 - **Mentorship Opportunities:**
 
-The OnRamp Program offers invaluable mentorship from seasoned professionals in the PowerShell and
-DevOps communities. These mentors not only provide guidance and share industry insights but also
-offer personalized advice, ensuring participants feel supported and guided as they navigate their
-entry into the field.
+  The OnRamp Program offers invaluable mentorship from seasoned professionals in the PowerShell and
+  DevOps communities. These mentors not only provide guidance and share industry insights but also
+  offer personalized advice, ensuring participants feel supported and guided as they navigate their
+  entry into the field.
 
 - **Networking with Industry Experts:**
 
-The program provides unique opportunities to engage with industry experts and peers, fostering a
-supportive community of like-minded professionals. This networking aspect is designed to help
-participants build relationships, share knowledge, and explore career opportunities within the
-PowerShell and DevOps ecosystems.
+  The program provides unique opportunities to engage with industry experts and peers, fostering a
+  supportive community of like-minded professionals. This networking aspect is designed to help
+  participants build relationships, share knowledge, and explore career opportunities within the
+  PowerShell and DevOps ecosystems.
 
 ## Scholarship Opportunities
 

@@ -118,6 +118,14 @@ documentation for Microsoft, he can be found sharing his thoughts and insights o
 
 ### Carrie Cargill
 
+Carrie Cargill is a relative PowerShell novice compared to the other OnRamp organizers. Her strength
+is in creating developmentally appropriate curriculum for learners of all ages with topics as simple
+as reading and writing all the way through career development and leadership. She is the author of
+the Young Athlete Development module for USA Shooting's Coach's Academy and received the US
+Corporate Citizenship award for creating and leading a business skills workshop while working for
+Accenture. In her spare time, you can find her on the range getting ready for the precision pistol
+national matches.
+
 ### Jeff Hicks
 
 Jeff Hicks is one of the _old guard_ of the PowerShell world. He is one of the early Microsoft

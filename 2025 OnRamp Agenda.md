@@ -39,63 +39,72 @@ always subject to change.
 
 ### Monday 7 April
 
-|  Schedule   |       Event        |   Location    |
-| ----------: | ------------------ | ------------- |
-|   8:00-9:00 | Breakfast          | Center Hall B |
-|   9:00-9:30 | Opening Remarks    | Center Hall B |
-|  9:30-10:15 | KeyNote            | Center Hall B |
-| 10:15-10:30 | Break              | Center Hall B |
-| 10:30-12:00 | OnRamp (See note.) | Room 409      |
-|  12:00-1:00 | Lunch              | Center Hall B |
-|   1:00-5:00 | OnRamp             | Room 409      |
+|  Schedule   |                        Event                         |   Location    |
+| ----------: | ---------------------------------------------------- | ------------- |
+|   8:00-9:00 | Breakfast                                            | Center Hall B |
+|   9:00-9:30 | Opening Remarks                                      | Center Hall B |
+|  9:30-10:15 | KeyNote                                              | Center Hall B |
+| 10:15-10:30 | Break                                                | Center Hall B |
+| 10:30-11:15 | State of the Shell                                   | Center Hall B |
+| 11:15-12:00 | State of IaC (See note.)                             | Center Hall B |
+|  12:00-1:00 | Lunch                                                | Center Hall B |
+|   1:00-1:30 | OnRamp welcome and intro                             | Room 409      |
+|   1:30-2:00 | Getting started with PowerShell                      | Room 409      |
+|   2:00-2:30 | The Help system                                      | Room 409      |
+|   2:30-3:00 | Extending the capability of PowerShell               | Room 409      |
+|   3:00-3:30 | Discovering objects, properties, and methods         | Room 409      |
+|   3:30-4:00 | One-liners and the pipeline                          | Room 409      |
+|   4:15-5:00 | Formatting, aliases, providers, comparison operators | Room 409      |
 
 > [!NOTE]
-> If you've already installed PowerShell 7, Visual Studio Code (VS Code), and the PowerShell
-> extension for VS Code on the computer you brought with you for OnRamp, feel free to attend State
-> of the Shell and State of IaC in Center Hall B from 10:30-12:00.
+> If you haven't installed PowerShell 7, VS Code, the PowerShell extension for VS Code, Git, and
+> created a GitHub account, you must come to room 409 during State of the IaC.
 
 ### Tuesday 8 April
 
-|  Schedule   |             Event              |   Location    |
-| ----------: | ------------------------------ | ------------- |
-|   8:00-9:00 | Breakfast                      | Center Hall B |
-|   9:00-9:45 | Individual Contributor Careers | Center Hall B |
-|  9:45-10:30 | OnRamp                         | Room 409      |
-| 10:30-11:00 | Break                          | Center Hall B |
-| 11:00-12:00 | OnRamp                         | Room 409      |
-|  12:00-1:00 | Lunch                          | Center Hall B |
-|   1:00-3:00 | OnRamp                         | Room 409      |
-|   3:00-3:30 | Break                          | Center Hall B |
-|   3:30-6:00 | Lightning Demos                | Center Hall B |
+|  Schedule   |              Event              |   Location    |
+| ----------: | ------------------------------- | ------------- |
+|   8:00-9:00 | Breakfast                       | Center Hall B |
+|   9:00-9:45 | Individual Contributor Careers  | Center Hall B |
+|  9:45-10:30 | Flow Control                    | Room 409      |
+| 10:30-11:00 | Break                           | Center Hall B |
+| 11:00-12:00 | Working with WMI                | Room 409      |
+|  12:00-1:00 | Lunch                           | Center Hall B |
+|   1:00-3:00 | Git, GitHub, and the GitHub CLI | Room 409      |
+|   3:00-3:30 | Break                           | Center Hall B |
+|   3:30-6:00 | Lightning Demos                 | Center Hall B |
 
 ### Wednesday 9 April
 
 |  Schedule   |          Event           |   Location    |
 | ----------: | ------------------------ | ------------- |
 |   8:00-9:00 | Breakfast                | Center Hall B |
-|   9:00-9:25 | OnRamp                   | Room 409      |
+|   9:00-9:25 | PowerShell jobs          | Room 409      |
 |   9:25-9:45 | Sponsor Mix and Mingle   | Center Hall B |
-|  9:45-10:30 | OnRamp                   | Room 409      |
+|  9:45-10:30 | PowerShell remoting      | Room 409      |
 | 10:30-11:00 | Break / Vendor Tech Demo | Center Hall B |
-| 11:00-12:00 | OnRamp                   | Room 409      |
+| 11:00-12:00 | Functions                | Room 409      |
 |  12:00-1:00 | Lunch                    | Center Hall B |
-|   1:00-3:05 | OnRamp                   | Room 409      |
-|   3:05-3:35 | Break / Vendor Tech Demo | Center Hall B |
-|   3:35-5:00 | OnRamp                   | Room 409      |
+|   1:00-2:00 | Advanced Functions       | Room 409      |
+|   2:00-3:05 | Script modules           | Room 409      |
+|   3:05-3:30 | Break / Vendor Tech Demo | Center Hall B |
+|   3:30-4:15 | Secrets management       | Room 409      |
+|   4:15-5:00 | Pester                   | Room 409      |
 
 ### Thursday 10 April
 
-|  Schedule   |          Event           |   Location    |
-| ----------: | ------------------------ | ------------- |
-|   8:00-9:00 | Breakfast                | Center Hall B |
-|  9:00-10:30 | OnRamp                   | Room 409      |
-| 10:30-11:00 | Break / Vendor Tech Demo | Center Hall B |
-| 11:00-12:00 | OnRamp                   | Room 409      |
-|  12:00-1:00 | Lunch                    | Center Hall B |
-|   1:00-2:30 | OnRamp                   | Room 409      |
-|   2:30-2:45 | Break                    | Center Hall B |
-|   2:45-3:30 | OnRamp                   | Room 409      |
-|   5:00-8:00 | After Party              | TBD           |
+|  Schedule   |             Event             |   Location    |
+| ----------: | ----------------------------- | ------------- |
+|   8:00-9:00 | Breakfast                     | Center Hall B |
+|   9:00-9:45 | Prompt Engineering            | Room 409      |
+|  9:45-10:30 | Debugging                     | Room 409      |
+| 10:30-11:00 | Break / Vendor Tech Demo      | Center Hall B |
+| 11:00-12:00 | What has PowerShell taught me | Room 409      |
+|  12:00-1:00 | Lunch                         | Center Hall B |
+|   1:00-2:30 | Stump the chump               | Room 409      |
+|   2:30-2:45 | Break                         | Center Hall B |
+|   2:45-3:30 | Next steps                    | Room 409      |
+|   5:00-8:00 | After Party                   | TBD           |
 
 Make the most of your time at the PowerShell Summit by attending social events. These gatherings are
 unique opportunities to connect with peers, share ideas, and learn from others' experiences.

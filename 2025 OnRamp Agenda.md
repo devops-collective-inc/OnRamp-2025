@@ -124,14 +124,16 @@ documentation for Microsoft, he can be found sharing his thoughts and insights o
 ### Steven Judd
 
 Steven Judd is a Microsoft MVP and IT professional with over 30 years of experience, currently
-serving as an Infrastructure Engineer at Tenstreet LLC. He has a diverse background, including roles
-as an Enterprise Email Administrator, Digital Security Analyst, and Cloud/DevOps Advisor. A
-PowerShell enthusiast since 2010, Steven co-developed a custom training program for the language. He
-has also contributed to _Modern IT Automation with PowerShell_ and _PowerShell Conference Book 3_.
-Passionate about teaching and automation, Steven enjoys expanding his knowledge of PowerShell, cloud
-technologies, and digital security. Outside of work, he's an avid runner, cyclist, and cello player,
-often found on the PowerShell Discord server. Follow him on [Twitter][steven-twitter], read his
-[blog][steven-blog], and check out his work on [GitHub][steven-github].
+serving as an [Infrastructure Engineer at Tenstreet LLC][steven-linkedin]. He has a diverse
+background, including roles as an Enterprise Email Administrator, Digital Security Analyst, and
+Cloud/DevOps Advisor. A PowerShell enthusiast since 2010, Steven co-developed a custom training
+program for the language. He has also contributed to
+[_Modern IT Automation with PowerShell_][modern-it] and
+[_PowerShell Conference Book 3_][psconf3]. Passionate about teaching and automation, Steven enjoys
+expanding his knowledge of PowerShell, cloud technologies, and digital security. Outside of work,
+he's an avid runner, cyclist, and cello player, and is often found on the PowerShell Discord server.
+Follow him on [Twitter][steven-twitter], read his [blog][steven-blog], and check out his work on
+[GitHub][steven-github].
 
 ### Carrie Cargill
 
@@ -156,6 +158,9 @@ media at [https://jdhitsolutions.github.io/][jdhitsolutions].
 
 [onramp-2025]: https://github.com/devops-collective-inc/OnRamp-2025
 [mikefrobbins.com]: https://mikefrobbins.com/
+[steven-linkedin]: https://www.linkedin.com/in/stevenjudd/
+[modern-it]: https://leanpub.com/modernautomationwithpowershell
+[psconf3]: https://www.amazon.com/PowerShell-Conference-Book-3/dp/B08MGR749H/ref=sr_1_5
 [steven-twitter]: https://twitter.com/stevenjudd
 [steven-blog]: https://blog.stevenjudd.com/
 [steven-github]: https://github.com/stevenjudd

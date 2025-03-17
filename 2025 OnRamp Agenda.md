@@ -78,9 +78,10 @@ always subject to change.
 |  Schedule   |              Event               |   Location    |      Speaker      |
 | ----------: | -------------------------------- | ------------- | ----------------- |
 |   8:00-9:00 | Breakfast                        | Center Hall B |                   |
-|  9:00-10:30 | Functions & script modules       | Room 409      | Mike F. Robbins   |
+|   9:00-9:45 | PowerShell jobs                  | Room 409      | Jeff Hicks        |
+|  9:45-10:30 | Functions                        | Room 409      | Mike F. Robbins   |
 | 10:30-11:00 | Break / Vendor Tech Demo         | Center Hall B |                   |
-| 11:00-12:00 | PowerShell remoting              | Room 409      | Steven Judd       |
+| 11:00-12:00 | Script modules                   | Room 409      | Mike F. Robbins   |
 |  12:00-1:00 | Lunch                            | Center Hall B |                   |
 |   1:00-2:00 | Intro to DevOps and IaC          | Room 409      | Joe Houghes       |
 |   2:00-3:05 | Intro to Containers & Kubernetes | Room 409      | Anthony Nocentino |
@@ -93,8 +94,8 @@ always subject to change.
 |  Schedule   |              Event               |   Location    |    Speaker     |
 | ----------: | -------------------------------- | ------------- | -------------- |
 |   8:00-9:00 | Breakfast                        | Center Hall B |                |
-|   9:00-9:45 | Intro to Azure                   | Room 409      | Steven Judd    |
-|  9:45-10:30 | PowerShell jobs                  | Room 409      | Jeff Hicks     |
+|   9:00-9:45 | PowerShell remoting              | Room 409      | Steven Judd    |
+|  9:45-10:30 | Intro to Azure                   | Room 409      | Steven Judd    |
 | 10:30-11:00 | Break / Vendor Tech Demo         | Center Hall B |                |
 | 11:00-12:00 | Debugging                        | Room 409      | Steven Judd    |
 |  12:00-1:00 | Lunch                            | Center Hall B |                |

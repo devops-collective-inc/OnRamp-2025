@@ -33,6 +33,9 @@ career and personal development. Pursuing certifications can:
 - Give you confidence in your abilities
 - Open doors to new career opportunities
 
+To learn more about the value of certifications, see
+[The Value of Certifications](the-value-of-certifications.md).
+
 ## Finding a mentor
 
 Mentorship can be one of the most valuable resources early in your career. A mentor can:
@@ -58,6 +61,9 @@ prepare:
 
 Also, be prepared to show how you fit within the company culture. Confidence, honesty, and
 enthusiasm are key attributes to showcase.
+
+To learn more about interviewing, see
+[Interviewing with Confidence](interviewing-with-confidence.md).
 
 ## Office behavior: Professionalism and adaptability
 
@@ -108,6 +114,9 @@ through your expertise in a specific technology, problem-solving abilities, or l
 Build your brand by sharing knowledge through blogs, open source contributions, or on social media.
 Networking and collaborating with others also strengthens your reputation and increases your
 visibility in the industry.
+
+To learn more about building a personal brand, see
+[Building a Personal Brand](building-a-personal-brand.md).
 
 ## Networking for career growth
 

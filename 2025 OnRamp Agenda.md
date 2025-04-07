@@ -39,21 +39,22 @@ always subject to change.
 
 ### Monday 7 April
 
-|  Schedule   |                   Event                    |   Location    |     Speaker      |
-| ----------: | ------------------------------------------ | ------------- | ---------------- |
-|   8:00-9:00 | Breakfast                                  | Center Hall B |                  |
-|   9:00-9:30 | Opening Remarks                            | Center Hall B |                  |
-|  9:30-10:15 | KeyNote                                    | Center Hall B | Jennifer Stirrup |
-| 10:15-10:30 | Break                                      | Center Hall B |                  |
-| 10:30-11:15 | State of the Shell                         | Center Hall B | Jason Helmick    |
-| 11:15-12:00 | State of IaC (See note.)                   | Center Hall B |                  |
-|  12:00-1:00 | Lunch                                      | Center Hall B |                  |
-|   1:00-1:30 | OnRamp welcome and intro                   | Room 409      | OnRamp Team      |
-|   1:30-1:45 | Strategies for Drinking from the Fire Hose | Room 409      | Carrie Cargill   |
-|   1:45-3:00 | Getting started with PowerShell            | Room 409      | Mike F. Robbins  |
-|   3:00-3:15 | Break                                      | Room 409      |                  |
-|   3:15-5:00 | One-liners and the pipeline                | Room 409      | Mike F. Robbins  |
-|   5:00-8:00 | Community Happy Hour                       | Vendor Hall   |                  |
+|  Schedule   |                    Event                     |   Location    |     Speaker      |
+| ----------: | -------------------------------------------- | ------------- | ---------------- |
+|   8:00-9:00 | Breakfast                                    | Center Hall B |                  |
+|   9:00-9:30 | Opening Remarks                              | Center Hall B |                  |
+|  9:30-10:00 | KeyNote                                      | Center Hall B | Jennifer Stirrup |
+| 10:00-10:15 | Break                                        | Center Hall B |                  |
+| 10:15-11:00 | State of IaC (See note.)                     | Center Hall B |                  |
+| 11:00-12:00 | State of the Shell                           | Center Hall B | Jason Helmick    |
+|  12:00-1:00 | Lunch                                        | Center Hall B |                  |
+|   1:00-1:30 | OnRamp welcome and intro                     | Room 409      | OnRamp Team      |
+|   1:30-1:45 | Strategies for Drinking from the Fire Hose   | Room 409      | Carrie Cargill   |
+|   1:45-2:30 | Getting started with PowerShell              | Room 409      | Mike F. Robbins  |
+|   2:30-2:50 | Break                                        | Room 409      |                  |
+|   2:50-4:30 | One-liners and the pipeline                  | Room 409      | Mike F. Robbins  |
+|   4:30-5:00 | Reflections of a non-traditional career path | Room 409      |                  |
+|   5:00-8:00 | Community Happy Hour                         | Vendor Hall   |                  |
 
 > [!NOTE]
 > If you haven't installed PowerShell 7, VS Code, the PowerShell extension for VS Code, Git, and

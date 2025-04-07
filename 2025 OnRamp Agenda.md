@@ -44,8 +44,8 @@ always subject to change.
 |   8:00-9:00 | Breakfast                                    | Center Hall B |                  |
 |   9:00-9:30 | Opening Remarks                              | Center Hall B |                  |
 |  9:30-10:00 | KeyNote                                      | Center Hall B | Jennifer Stirrup |
-| 10:00-10:15 | Break                                        | Center Hall B |                  |
-| 10:15-11:00 | State of IaC (See note.)                     | Center Hall B |                  |
+| 10:15-10:30 | Break                                        | Center Hall B |                  |
+| 10:30-11:00 | State of IaC (See note.)                     | Center Hall B |                  |
 | 11:00-12:00 | State of the Shell                           | Center Hall B | Jason Helmick    |
 |  12:00-1:00 | Lunch                                        | Center Hall B |                  |
 |   1:00-1:30 | OnRamp welcome and intro                     | Room 409      | OnRamp Team      |

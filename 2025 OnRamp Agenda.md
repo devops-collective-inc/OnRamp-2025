@@ -54,7 +54,7 @@ always subject to change.
 |   2:30-2:50 | Break                                        | Room 409      |                  |
 |   2:50-4:30 | One-liners and the pipeline                  | Room 409      | Mike F. Robbins  |
 |   4:30-5:00 | Reflections of a non-traditional career path | Room 409      |                  |
-|   5:00-8:00 | Community Happy Hour                         | Vendor Hall   |                  |
+|   5:00-8:00 | Community Happy Hour                         | Center Hall B |                  |
 
 > [!NOTE]
 > If you haven't installed PowerShell 7, VS Code, the PowerShell extension for VS Code, Git, and

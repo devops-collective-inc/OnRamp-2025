@@ -45,8 +45,8 @@ always subject to change.
 |   9:00-9:30 | Opening Remarks                              | Center Hall B |                  |
 |  9:30-10:00 | KeyNote                                      | Center Hall B | Jennifer Stirrup |
 | 10:15-10:30 | Break                                        | Center Hall B |                  |
-| 10:30-11:00 | State of IaC (See note.)                     | Center Hall B |                  |
-| 11:00-12:00 | State of the Shell                           | Center Hall B | Jason Helmick    |
+| 10:30-11:15 | State of IaC (See note.)                     | Center Hall B |                  |
+| 11:15-12:00 | State of the Shell                           | Center Hall B | Jason Helmick    |
 |  12:00-1:00 | Lunch                                        | Center Hall B |                  |
 |   1:00-1:30 | OnRamp welcome and intro                     | Room 409      | OnRamp Team      |
 |   1:30-1:45 | Strategies for Drinking from the Fire Hose   | Room 409      | Carrie Cargill   |

@@ -93,7 +93,6 @@ $Service = 'w32time'; Get-Service -Name $Service
 
 #endregion
 
-
 #region Filter left
 
 <#
@@ -170,6 +169,24 @@ Get-Service -Name w32time | Get-Member
     the output of the Get-Service cmdlet to Stop-Service, the ServiceController objects
     produced by Get-Service bind to the InputObject parameter of Stop-Service.
 #>
+
+#endregion
+
+#region Select-Object
+
+# Select-Object is used for selecting all or specific properties.
+
+
+
+#endregion
+
+#region Where-Object
+
+Get-Service | Where-Object Name -eq w32time
+Get-Service
+Get-Service | Select-Object -Property *
+
+
 
 #endregion
 

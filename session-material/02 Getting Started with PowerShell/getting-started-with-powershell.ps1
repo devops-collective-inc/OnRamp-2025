@@ -110,6 +110,8 @@ Update-Help -Module PowerShellGet -Force
 # How do I figure out what the commands are?
 
 Get-Command
+Get-Command -OutVariable a
+$a.Count
 Get-Command -Name *process*
 Get-Command -Name *process* -CommandType Cmdlet, Function, Alias
 
@@ -122,6 +124,7 @@ Get-Command -Noun *Process*
 
 # ******** What is the output of the following command? ********
 Get-Command -Noun *Process* -CommandType Cmdlet, Function, Alias
+Get-Command -Noun *Process*  -
 
 Get-Command -Noun Process
 Get-Command -Noun Process*
@@ -158,13 +161,13 @@ Get-Command -Name Get-Help, help, man
 Get-Help -Name Stop-Process
 
 # Use the help function. The Name parameter is being used positionally
-help Stop-Process
+help Stop-Process  
 
 # To see examples of how to use a cmdlet, use the Examples parameter
 help Stop-Process -Examples
 
 # Find help about a specific parameter
-help Stop-Process -Parameter Name
+help Stop-Process -Parameter Name 
 
 # To see all information that Get-Help provides about a command, use the Full parameter.
 # This includes all the details, parameters, inputs, outputs, notes, and examples.
@@ -222,7 +225,7 @@ $process.Count
 help *process*
 help pr?cess
 help *pr?cess*
-help -process
+help '-process'
 help *-process
 help processes -OutVariable processes
 $processes.Count
@@ -235,7 +238,7 @@ $processes.Count / $process.Count
 
 #region Running commands
 
-$Path = 'C:\OnRamp'
+$path = 'C:\OnRamp'
 if (-not(Test-Path -Path $Path -PathType Container)) {
     New-Item -Path $Path -ItemType Directory | Out-Null
 }
@@ -269,11 +272,12 @@ Get-Process -Name pwsh | Get-Member
 
 # Filtering with Where-Object
 Get-Process | Where-Object {$_.Name -eq 'pwsh'}
-Get-Process | Where-Object -FilterScript {$_.Name -eq 'pwsh'}
+Get-Process | Where-Object -FilterScript {$_.Name -e
 
 # Simplified syntax (not really)
 Get-Process | Where-Object Name -eq pwsh
-Get-Process | Where-Object -Property Name -eq pwsh
+Get-Process | Where-Object -Property Name -EQ pwsh
+Get-Process | Where-Object -Value pwsh -Property Name -EQ
 
 # Compound Where-Object syntax
 Get-Process | Where-Object {$_.Name -eq 'pwsh' -and $_.Parent -like '*WindowsTerminal*'}

@@ -176,7 +176,8 @@ Get-Service -Name w32time | Get-Member
 
 # Select-Object is used for selecting all or specific properties.
 
-
+Get-Service -Name w32Time
+Get-Service -Name w32time | Select-Object -Property *
 
 #endregion
 

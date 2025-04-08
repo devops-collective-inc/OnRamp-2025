@@ -272,7 +272,6 @@ Get-Process -Name pwsh | Get-Member
 
 # Filtering with Where-Object
 Get-Process | Where-Object {$_.Name -eq 'pwsh'}
-Get-Process | Where-Object -FilterScript {$_.Name -e
 
 # Simplified syntax (not really)
 Get-Process | Where-Object Name -eq pwsh
@@ -288,11 +287,9 @@ Get-Process | Where-Object {$_.Name -eq 'pwsh' -and $_.Parent -match 'WindowsTer
 #region Extending the capability of PowerShell
 
 <#
-
-    Microsoft.PowerShell.PSResourceGet is a module with commands for discovering, installing,
-    updating and publishing PowerShell artifacts like Modules, DSC Resources, Role Capabilities, and
-    Scripts.
-
+    Microsoft.PowerShell.PSResourceGet is a module with commands for discovering,
+    installing, updating and publishing PowerShell artifacts like Modules, DSC Resources,
+    Role Capabilities, and Scripts.
 #>
 
 Get-Module -Name Microsoft.PowerShell.PSResourceGet, PowerShellGet -ListAvailable
@@ -302,36 +299,15 @@ $env:PSModulePath -split ';'
 $env:PSModulePath -split [System.IO.Path]::PathSeparator
 
 Find-Module -Name Microsoft.PowerShell.PSResourceGet
-
-# The following command generates the error: "Update-Module: Module 'Microsoft.PowerShell.PSResourceGet' was not installed by using Install-Module, so it cannot be updated."
-Update-Module -Name Microsoft.PowerShell.PSResourceGet
 Install-Module -Name Microsoft.PowerShell.PSResourceGet
 
 Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable
 
 Get-Command -Module Microsoft.PowerShell.PSResourceGet
 
-Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable
-Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version
-Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version -Descending
-Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version -Descending | Select-Object -First 1
-Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version -Descending | Select-Object -First 1 -Property *
-Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version -Descending | Select-Object -First 1 -Property ModuleBase
-Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version -Descending | Select-Object -First 1 -ExpandProperty ModuleBase
-
-Get-ChildItem -Path (Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version -Descending | Select-Object -First 1 -ExpandProperty ModuleBase)
-
-Get-ChildItem -Path (Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version -Descending | Select-Object -First 1 -ExpandProperty ModuleBase) -Force
-
-Import-Clixml -Path (Join-Path -Path (Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version -Descending | Select-Object -First 1 -ExpandProperty ModuleBase) -ChildPath PSGetModuleInfo.xml)
-
-Import-Clixml -Path (Join-Path -Path (Get-Module -Name Microsoft.PowerShell.PSResourceGet -ListAvailable | Sort-Object -Property Version -Descending | Select-Object -First 1 -ExpandProperty ModuleBase) -ChildPath PSGetModuleInfo.xml) | Select-Object -Property *
-
 #endregion
 
-#region Scripting Language
-
-# Variables
+#region Variables
 
 # Commands for working with variables
 Get-Command -Noun variable
@@ -344,7 +320,6 @@ $intNumber
 [string]$name
 [int]$number
 
-# My personal preference
 # Use camel case for user defined variables
 $resourceGroupName
 

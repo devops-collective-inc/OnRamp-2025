@@ -66,9 +66,9 @@ always subject to change.
 | ----------: | ------------------------------- | ------------- | -------------- |
 |   8:00-9:00 | Breakfast                       | Center Hall B |                |
 |   9:00-9:45 | Individual Contributor Careers  | Center Hall B | Jeffrey Snover |
-|  9:55-10:40 | PowerShell scripting (part 1)   | Room 409      | Steven Judd    |
-| 10:40-11:00 | Break                           | Center Hall B |                |
-| 11:00-12:00 | PowerShell scripting (part 2)   | Room 409      | Steven Judd    |
+| 10:10-10:55 | PowerShell scripting (part 1)   | Room 409      | Steven Judd    |
+| 10:55-11:10 | Break                           | Center Hall B |                |
+| 11:10-12:00 | PowerShell scripting (part 2)   | Room 409      | Steven Judd    |
 |  12:00-1:00 | Lunch                           | Center Hall B |                |
 |   1:00-3:00 | Git, GitHub, and the GitHub CLI | Room 409      | Sean Wheeler   |
 |   3:00-3:30 | Break                           | Center Hall B |                |

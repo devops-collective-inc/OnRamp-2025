@@ -729,6 +729,157 @@ help Get-MrAutoStoppedService -Full
 
 #endregion
 
+#region Monolithic Script Module
+
+<#
+    A script module in PowerShell is simply a file containing one or more
+    functions that's saved as a PSM1 file instead of a PS1 file.
+
+    How do you create a script module file? Not with the New-Module cmdlet.
+#>
+
+help New-Module -Online
+
+# Create a directory for the script module
+New-Item -Path $Path -Name OnRamp -ItemType Directory
+
+# Create the script module (PSM1 file)
+New-Item -Path "$Path\OnRamp" -Name OnRamp.psm1 -ItemType File
+
+# Add the two previously used functions to our script module
+Set-Content -Path "$Path\OnRamp\OnRamp.psm1" -Encoding UTF8 -Value @'
+function Open-OnRampRepo {
+    Start-Process https://github.com/devops-collective-inc/OnRamp-2025
+}
+
+function Get-OnRampBuddyPair {
+<#
+.SYNOPSIS
+    Pairs attendees with buddies from two separate groups.
+
+.DESCRIPTION
+    Randomly pairs each attendee with a unique buddy from a separate list.
+    If there are more attendees than buddies, unmatched attendees are still
+    included with a null buddy value. Buddies are never assigned more than
+    once. The pairing is randomized on each function call.
+
+.PARAMETER Attendee
+    A list of attendees to be paired. Each attendee will be matched with one
+    buddy, if enough buddies are available.
+
+.PARAMETER Buddy
+    A list of buddies to be paired. Each buddy is matched with one attendee
+    at most.
+
+.EXAMPLE
+    Get-OnRampBuddyPair -Attendee Alex, Jordan -Buddy Casey, Morgan
+
+.OUTPUTS
+    PSCustomObject
+
+.NOTES
+    Author:  Mike F. Robbins
+    Website: https://mikefrobbins.com/
+    Twitter: @mikefrobbins
+#>
+    [CmdletBinding()]
+    param (
+        [Parameter(Mandatory)]
+        [string[]]$Attendee,
+
+        [Parameter(Mandatory)]
+        [string[]]$Buddy
+    )
+
+    # Shuffle both lists independently
+    $shuffledAttendee = $Attendee | Sort-Object {Get-Random}
+    $shuffledBuddy = $Buddy | Sort-Object {Get-Random}
+
+    # Pair attendees to buddies (only while we have buddies left)
+    for ($i = 0; $i -lt $shuffledAttendee.Count; $i++) {
+        if ($i -lt $shuffledBuddy.Count) {
+            [PSCustomObject]@{
+                Attendee = $shuffledAttendee[$i]
+                Buddy    = $shuffledBuddy[$i]
+            }
+        }
+        else {
+            # No buddy available — still return attendee with $null buddy
+            [PSCustomObject]@{
+                Attendee = $shuffledAttendee[$i]
+                Buddy    = $null
+            }
+        }
+    }
+
+}
+'@
+
+# Open the new script module file in VS Code
+code $Path\OnRamp\OnRamp.psm1
+
+# Try to call one of the functions
+Open-OnRampRepo
+
+<#
+    In order to take advantage of module autoloading, a script module needs
+    to be saved in a folder with the same base name as the PSM1
+    file and in a location specified in $env:PSModulePath.
+#>
+
+# Show the PSModulePath on my computer
+$env:PSModulePath -split ';'
+
+#******************************************************************
+#Close out of all open script and/or module files
+#******************************************************************
+
+# Move our newly created module to a location that exist in $env:PSModulePath
+Move-Item -Path $Path\OnRamp -Destination $env:USERPROFILE\Documents\PowerShell\Modules
+
+# Try to call one of the functions
+Open-OnRampRepo
+
+#endregion
+
+#region Module Manifests
+
+<#
+    All script modules should have a module manifest which is a PSD1 file that
+    contains meta data about the module itself. New-ModuleManifest is used to
+    create a module manifest. Path is the only value that's required. However,
+    the module won't work if root module is not specified. It's a good idea to
+    specify Author and Description because they are required if you decide to
+    upload your module to a Nuget repository with PowerShellGet.
+
+    The version of a module without a manifest is 0.0 (This is a dead givaway
+    that the module doesn't have a manifest).
+#>
+Get-Module -Name OnRamp -ListAvailable
+
+<#
+    The module manifest can be initially created with all this information
+    instead of updating it. You don't really want to recreate the manifest once
+    it's created because the GUID will change
+#>
+
+$ManifestParams = @{
+    Path = "$env:USERPROFILE\Documents\PowerShell\Modules\OnRamp\OnRamp.psd1"
+    RootModule = 'OnRamp'
+    Author = 'Mike F. Robbins'
+    Description = 'OnRamp'
+    CompanyName = 'mikefrobbins.com'
+}
+
+New-ModuleManifest @ManifestParams
+
+#Check to see if any commands are exported
+Import-Module -Name OnRamp -Force
+Get-Command -Module OnRamp
+Get-Module -Name OnRamp
+
+#endregion
+
 #region Cleanup
 
 #Reset the settings changes for this presentation

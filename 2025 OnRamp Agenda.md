@@ -72,7 +72,7 @@ always subject to change.
 |  12:00-1:00 | Lunch                           | Center Hall B |                |
 |   1:00-3:00 | Git, GitHub, and the GitHub CLI | Room 409      | Sean Wheeler   |
 |   3:00-3:30 | Break                           | Center Hall B |                |
-|   3:30-6:00 | Lightning Demos                 | Center Hall B |                |
+|   3:30-5:00 | Lightning Demos                 | Center Hall B |                |
 
 ### Wednesday 9 April
 
@@ -100,8 +100,9 @@ always subject to change.
 | 10:30-11:00 | Break / Vendor Tech Demo         | Center Hall B |                |
 | 11:00-12:00 | Debugging                        | Room 409      | Steven Judd    |
 |  12:00-1:00 | Lunch                            | Center Hall B |                |
-|   1:00-2:30 | Stump the experts                | Room 409      | OnRamp Team    |
-|   2:30-2:45 | Break                            | Center Hall B |                |
+|   1:00-1:40 | Stump the experts                | Room 409      | OnRamp Team    |
+|   1:40-1:50 | Break                            | Center Hall B |                |
+|   1:50-2:45 | Stump the experts part 2         | Room 409      | OnRamp Team    |
 |   2:45-3:00 | Plan to Keep your Momentum Going | Room 409      | Carrie Cargill |
 |   3:00-3:30 | Key takeaways & next steps       | Room 409      | OnRamp Team    |
 |   5:00-8:00 | After Party                      | TBD           |                |

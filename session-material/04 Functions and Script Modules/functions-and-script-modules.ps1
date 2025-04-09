@@ -729,7 +729,7 @@ help Get-MrAutoStoppedService -Full
 
 #endregion
 
-#region Monolithic Script Module
+#region Script Module
 
 <#
     A script module in PowerShell is simply a file containing one or more
@@ -863,8 +863,10 @@ Get-Module -Name OnRamp -ListAvailable
     it's created because the GUID will change
 #>
 
+$manifestPath = "$env:USERPROFILE\Documents\PowerShell\Modules\OnRamp\OnRamp.psd1"
+
 $ManifestParams = @{
-    Path = "$env:USERPROFILE\Documents\PowerShell\Modules\OnRamp\OnRamp.psd1"
+    Path = $manifestPath
     RootModule = 'OnRamp'
     Author = 'Mike F. Robbins'
     Description = 'OnRamp'
@@ -878,7 +880,21 @@ Import-Module -Name OnRamp -Force
 Get-Command -Module OnRamp
 Get-Module -Name OnRamp
 
+# View the module manifest
+code $manifestPath
+
+# Update the module manifest
+Update-ModuleManifest -Path $manifestPath -FunctionsToExport 'Open-OnRampRepo', 'Get-OnRampBuddyPair'
+
 #endregion
+
+#region Publish Module
+
+$API = '******My-API-Key******'
+Publish-Module -Name OnRamp -Repository PSGallery -NuGetApiKey $API
+Find-Module -Name OnRamp
+
+##endregion
 
 #region Cleanup
 

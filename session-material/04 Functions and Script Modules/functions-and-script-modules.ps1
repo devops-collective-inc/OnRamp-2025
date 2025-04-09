@@ -526,6 +526,8 @@ function Test-MrPipelineInput {
 'Server01', 'Server02' | Test-MrPipelineInput
 $Object | Test-MrPipelineInput
 
+'Server01', 'Server02', $Object | Test-MrPipelineInput
+
 #### Important Considerations when using Pipeline Input
 
 # The begin block does not have access to the items that are piped to a command.
@@ -607,8 +609,7 @@ function Test-MrErrorHandling {
         foreach ($Computer in $ComputerName) {
             try {
                 Test-WSMan -ComputerName $Computer
-            }
-            catch {
+            } catch {
                 Write-Warning -Message "Unable to connect to Computer: $Computer"
             }
         }
@@ -709,7 +710,7 @@ function Get-MrAutoStoppedService {
     your functions that's just like using the default built-in cmdlets.
 #>
 
-help Get-MrAutoStoppedService -ShowWindow
+help Get-MrAutoStoppedService
 
 #endregion
 
@@ -876,8 +877,10 @@ Update-ModuleManifest -Path $manifestPath -FunctionsToExport 'Open-OnRampRepo', 
 #region Publish to the PowerShell gallery
 
 $psGalleryApiKey = Get-Secret -Name PSGalleryApiKey | ConvertFrom-SecureString -AsPlainText
-Publish-Module -Name OnRamp -Repository PSGallery -NuGetApiKey $psGalleryApiKey -WhatIf
+Publish-Module -Name OnRamp -Repository PSGallery -NuGetApiKey $psGalleryApiKey
+
 Find-Module -Name OnRamp
+Start-Process https://www.powershellgallery.com/
 
 #endregion
 

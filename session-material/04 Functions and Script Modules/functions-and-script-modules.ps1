@@ -855,6 +855,7 @@ Open-OnRampRepo
     The version of a module without a manifest is 0.0 (This is a dead givaway
     that the module doesn't have a manifest).
 #>
+
 Get-Module -Name OnRamp -ListAvailable
 
 <#
@@ -888,13 +889,13 @@ Update-ModuleManifest -Path $manifestPath -FunctionsToExport 'Open-OnRampRepo', 
 
 #endregion
 
-#region Publish Module
+#region Publish to the PowerShell gallery
 
-$API = '******My-API-Key******'
-Publish-Module -Name OnRamp -Repository PSGallery -NuGetApiKey $API
+$psGalleryApiKey = Get-Secret -Name PSGalleryApiKey | ConvertFrom-SecureString -AsPlainText
+Publish-Module -Name OnRamp -Repository PSGallery -NuGetApiKey $psGalleryApiKey -WhatIf
 Find-Module -Name OnRamp
 
-##endregion
+#endregion
 
 #region Cleanup
 
@@ -922,5 +923,9 @@ if ($vsCodeSettings -match '"window.zoomLevel": \d,') {
 }
 
 $vsCodeSettings | Out-File -FilePath $vsCodeSettingsPath
-  
+
+Get-ChildItem -Path $env:USERPROFILE\Documents\PowerShell\Modules\OnRamp -Recurse | Remove-Item
+Get-ChildItem -Path C:\OnRamp -Recurse | Remove-Item -Confirm:$false
+Get-ChildItem -Path Function:\Open-OnRampRepo, Function:\Get-OnRampBuddyPair | Remove-Item
+
 #endregion

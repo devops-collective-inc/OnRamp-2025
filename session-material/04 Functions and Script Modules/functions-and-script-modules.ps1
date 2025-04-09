@@ -63,11 +63,12 @@ Set-Location -Path $Path
 #region Dot-Sourcing functions
 
 <#
-    To avoid Scoping gotcha's, test your functions from the PowerShell console
-    instead of just inside VS Code or other IDEs.
+    To avoid Scoping gotchas, test your functions from the PowerShell console
+    or your terminal of choice instead of just inside VS Code.
 #>
 
 # Creating and dot-sourcing a function
+
 # Define the script path
 $scriptPath = "$Path\Get-MrComputerName.ps1"
 
@@ -91,10 +92,10 @@ function Get-MrComputerName {
 Get-MrComputerName
 
 # Check to see if the function exists on the Function PSDrive
+Get-PSDrive
 Get-ChildItem -Path Function:\Get-MrComputerName
 
 # The function needs to be dot-sourced to load it into the global scope
-# The relative path can be used
 . .\Get-MrComputerName.ps1
 
 # Try to call the function again
@@ -177,9 +178,8 @@ Get-Command -Name Test-MrParameter -Syntax
 #region Advanced Functions
 
 <#
-    Turning a function into an advanced function sounds really complicated, but
-    it's so simply that there's almost no reason not to turn all functions into
-    advanced functions. Adding CmdletBinding turns a function into an advanced function.
+    Adding CmdletBinding turns a function into an advanced function.
+    CmdletBinding requires a param block, but the param block can be empty.
 #>
 
 function Test-MrCmdletBinding {
@@ -193,12 +193,7 @@ function Test-MrCmdletBinding {
 
 }
 
-<#
-    CmdletBinding does require a param block, but the param block can be empty.
-#>
-
 # There are now additional (common) parameters.
-
 Get-Command -Name Test-MrCmdletBinding -Syntax
 (Get-Command -Name Test-MrCmdletBinding).Parameters.Keys
 
@@ -231,7 +226,7 @@ Test-MrParameterValidation -ComputerName Server01, Server02
 Test-MrParameterValidation
 
 <#
-    Typing the ComputerName parameter as a string only allows one value to be specified for it.
+    Typing the ComputerName parameter as a string only allows one value to be specified.
     Specifying more than one value generates an error. The problem though, is this doesn't prevent
     someone from specifying a null or empty value for that parameter or omitting it altogether.
 #>
@@ -283,8 +278,8 @@ Test-MrParameterValidation
 
 <#
     At least one value is required since the ComputerName parameter is
-    mandatory. Now that it accepts an array of strings, it will continue
-    to prompt for values when the ComputerName parameter is omitted until
+    mandatory. Now that it accepts an array of strings, it continues to
+    prompt for values when the ComputerName parameter is omitted until
     no value is provided, followed by pressing <enter>.
 #>
 
@@ -353,8 +348,8 @@ Test-MrConsoleColorValidation -Color Pink
     Notice that a error is returned when an invalid value is provided that
     doesn't exist in the enumeration.
 
-    I'm often asked the question "How do you find enumerations?" The following
-    command can be used to find them.
+    How do you find what enumerations are available? See the following
+    command.
 #>
 
 [AppDomain]::CurrentDomain.GetAssemblies().Where({-not($_.IsDynamic)}).ForEach({
@@ -368,10 +363,8 @@ Test-MrConsoleColorValidation -Color Pink
 # Type Accelerators
 
 <#
-    How much code have you seen written to validate IP addresses? Maybe it wasn't necessarily
-    a lot of code, but something that took a lot of time such as formulating a complicated
-    regular expression. Type accelerators to the rescue! They make the entire process of
-    validating both IPv4 and IPv6 addresses simple.
+    How do you validate IP addresses in PowerShell? Maybe a complicated regular expression?
+    Type accelerators make the process of validating both IPv4 and IPv6 addresses simple.
 #>
 
 function Test-MrIPAddress {
@@ -387,7 +380,7 @@ Test-MrIPAddress -IPAddress 10.1.1.256
 Test-MrIPAddress -IPAddress 2001:db8::ff00:42:8329
 Test-MrIPAddress -IPAddress 2001:db8:::ff00:42:8329
 
-# You might ask, how do I find Type Accelerators? With the following code.
+# How do you find Type Accelerators? With the following code.
 
 [psobject].Assembly.GetType('System.Management.Automation.TypeAccelerators')::Get |
     Sort-Object -Property Value
@@ -397,8 +390,8 @@ Test-MrIPAddress -IPAddress 2001:db8:::ff00:42:8329
 #region Verbose Output
 
 <#
-    Inline comments should be used sparingly because no one other than someone digging
-    through the code itself will ever see them as shown in the following example.
+    Inline comments should be used sparingly because no one other than someone looking
+    through the code sees them.
 #>
 
 function Test-MrVerboseOutput {
@@ -419,7 +412,7 @@ function Test-MrVerboseOutput {
 
 Test-MrVerboseOutput -ComputerName Server01, Server02 -Verbose
 
-# A better option is to use Write-Verbose instead of writing inline comments.
+# Use Write-Verbose instead of inline comments.
 
 function Test-MrVerboseOutput {
 
@@ -439,18 +432,13 @@ function Test-MrVerboseOutput {
 Test-MrVerboseOutput -ComputerName Server01, Server02
 Test-MrVerboseOutput -ComputerName Server01, Server02 -Verbose
 
-<#
-    When the Verbose parameter isn't specified, the comment isn't in the output
-    and when it is specified, the comment is displayed.
-#>
-
 #endregion
 
 #region Pipeline Input
 
 # By Value
 
-# Pipeline input by value is what I call by type.
+# Pipeline input By Value is what I call By Type.
 
 function Test-MrPipelineInput {
 
@@ -471,14 +459,14 @@ function Test-MrPipelineInput {
 'Server01', 'Server02' | Test-MrPipelineInput
 
 <#
-    When Pipeline input by value is used, the Type that is specified for the parameter
+    When Pipeline input By Value is used, the Type that is specified for the parameter
     can be piped in.
 
-    When a different type of object is piped in, it doesn't work successfully though
-    as shown in the following example.
+    When a different type of object is piped in, it doesn't work.
 #>
 
 $Object = New-Object -TypeName PSObject -Property @{'ComputerName' = 'Server01', 'Server02'}
+$Object
 $Object | Get-Member
 $Object | Test-MrPipelineInput
 
@@ -486,9 +474,8 @@ $Object | Test-MrPipelineInput
 #Pipeline Input by Property Name
 
 <#
-    Pipeline input by property name is a little more straight forward as it looks for
-    input that matches the actual property name such as ComputerName in the following
-    example.
+    Pipeline input by property name is more straight forward as it looks for input
+    that matches the actual property name such as ComputerName in the following example.
 #>
 
 function Test-MrPipelineInput {
@@ -516,8 +503,8 @@ $Object | Test-MrPipelineInput
 
 <#
     Both By Value and By Property Name can both be added to the same parameter.
-    In this scenario, By Value is always attempted first and By Property Name
-    will only ever be attempted if By Value doesn't work.
+    By Value is always attempted first and By Property Name is only attempted
+    if By Value doesn't work.
 #>
 
 function Test-MrPipelineInput {
@@ -602,7 +589,7 @@ function Test-MrErrorHandling {
 Test-MrErrorHandling -ComputerName DoesNotExist
 
 <#
-    Simply adding a try/catch block still causes an unhandled exception to occur
+    Adding a try/catch block still causes an unhandled exception to occur
     because the command doesn't generate a terminating error.
 #>
 
@@ -632,11 +619,8 @@ function Test-MrErrorHandling {
 Test-MrErrorHandling -ComputerName DoesNotExist
 
 <#
-    Specify the ErrorAction parameter with Stop as the value turns a non-terminating
-    error into a terminating one. Don't modify the global $ErrorActionPreference variable.
-    If you do change it such as in a scenario when you're using a non-PowerShell command
-    that doesn't support ErrorAction on the command itself, change it back immediately
-    after that command.
+    Specifying the ErrorAction parameter with Stop as the value turns a non-terminating
+    error into a terminating one.
 #>
 
 function Test-MrErrorHandling {
@@ -672,7 +656,7 @@ Test-MrErrorHandling -ComputerName DoesNotExist
 
 function Get-MrAutoStoppedService {
 
-    <#
+<#
 .SYNOPSIS
     Returns a list of services that are set to start automatically, are not
     currently running, excluding the services that are set to delayed start.
@@ -725,7 +709,7 @@ function Get-MrAutoStoppedService {
     your functions that's just like using the default built-in cmdlets.
 #>
 
-help Get-MrAutoStoppedService -Full
+help Get-MrAutoStoppedService -ShowWindow
 
 #endregion
 
@@ -924,8 +908,8 @@ if ($vsCodeSettings -match '"window.zoomLevel": \d,') {
 
 $vsCodeSettings | Out-File -FilePath $vsCodeSettingsPath
 
-Get-ChildItem -Path $env:USERPROFILE\Documents\PowerShell\Modules\OnRamp -Recurse | Remove-Item
+Get-ChildItem -Path $env:USERPROFILE\Documents\PowerShell\Modules\OnRamp -Recurse | Remove-Item -Confirm:$false
 Get-ChildItem -Path C:\OnRamp -Recurse | Remove-Item -Confirm:$false
-Get-ChildItem -Path Function:\Open-OnRampRepo, Function:\Get-OnRampBuddyPair | Remove-Item
+Get-ChildItem -Path Function:\Open-OnRampRepo, Function:\Get-OnRampBuddyPair -ErrorAction SilentlyContinue | Remove-Item
 
 #endregion

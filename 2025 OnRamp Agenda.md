@@ -95,14 +95,14 @@ always subject to change.
 |  Schedule   |              Event               |   Location    |    Speaker     |
 | ----------: | -------------------------------- | ------------- | -------------- |
 |   8:00-9:00 | Breakfast                        | Center Hall B |                |
-|   9:00-9:30 | Pester                           | Room 409      | Rob Pleau      |
-|  9:30-10:30 | Debugging                        | Room 409      | Steven Judd    |
+|   9:00-9:45 | Pester                           | Room 409      | Rob Pleau      |
+|  9:45-10:30 | Debugging                        | Room 409      | Steven Judd    |
 | 10:30-11:00 | Break / Vendor Tech Demo         | Center Hall B |                |
 | 11:00-12:00 | PowerShell remoting              | Room 409      | Steven Judd    |
 |  12:00-1:00 | Lunch                            | Center Hall B |                |
 |   1:00-1:40 | Intro to Azure                   | Room 409      | Steven Judd    |
 |   1:40-1:50 | Break                            | Center Hall B |                |
-|   1:50-3:00 | Stump the experts part 2         | Room 409      | OnRamp Team    |
+|   1:50-3:00 | Stump the experts                | Room 409      | OnRamp Team    |
 |   3:00-3:15 | Plan to Keep your Momentum Going | Room 409      | Carrie Cargill |
 |   3:15-3:30 | Key takeaways & next steps       | Room 409      | OnRamp Team    |
 |   5:00-8:00 | After Party                      | TBD           |                |

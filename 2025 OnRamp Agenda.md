@@ -102,8 +102,7 @@ always subject to change.
 |  12:00-1:00 | Lunch                            | Center Hall B |                |
 |   1:00-1:40 | Intro to Azure                   | Room 409      | Steven Judd    |
 |   1:40-1:50 | Break                            | Center Hall B |                |
-|   1:50-3:00 | Stump the experts                | Room 409      | OnRamp Team    |
-|   3:00-3:15 | Plan to Keep your Momentum Going | Room 409      | Carrie Cargill |
+|   1:50-3:15 | Stump the experts                | Room 409      | OnRamp Team    |
 |   3:15-3:30 | Key takeaways & next steps       | Room 409      | OnRamp Team    |
 |   5:00-8:00 | After Party                      | TBD           |                |
 

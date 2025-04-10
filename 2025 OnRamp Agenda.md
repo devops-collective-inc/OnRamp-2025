@@ -87,24 +87,24 @@ always subject to change.
 |   1:00-2:00 | Intro to DevOps and IaC          | Room 409      | Joe Houghes       |
 |   2:00-3:05 | Intro to Containers & Kubernetes | Room 409      | Anthony Nocentino |
 |   3:05-3:30 | Break / Vendor Tech Demo         | Center Hall B |                   |
-|   3:30-4:15 | Secrets Management               | Room 409      | Mike Kanakos      |
-|   4:15-5:00 | Pester                           | Room 409      | Rob Pleau         |
+|   3:30-4:45 | Secrets Management               | Room 409      | Mike Kanakos      |
+|   4:45-5:00 | End of day summary               | Room 409      | OnRamp team       |
 
 ### Thursday 10 April
 
 |  Schedule   |              Event               |   Location    |    Speaker     |
 | ----------: | -------------------------------- | ------------- | -------------- |
 |   8:00-9:00 | Breakfast                        | Center Hall B |                |
-|   9:00-9:45 | PowerShell remoting              | Room 409      | Steven Judd    |
-|  9:45-10:30 | Intro to Azure                   | Room 409      | Steven Judd    |
+|   9:00-9:30 | Pester                           | Room 409      | Rob Pleau      |
+|  9:30-10:30 | Debugging                        | Room 409      | Steven Judd    |
 | 10:30-11:00 | Break / Vendor Tech Demo         | Center Hall B |                |
-| 11:00-12:00 | Debugging                        | Room 409      | Steven Judd    |
+| 11:00-12:00 | PowerShell remoting              | Room 409      | Steven Judd    |
 |  12:00-1:00 | Lunch                            | Center Hall B |                |
-|   1:00-1:40 | Stump the experts                | Room 409      | OnRamp Team    |
+|   1:00-1:40 | Intro to Azure                   | Room 409      | Steven Judd    |
 |   1:40-1:50 | Break                            | Center Hall B |                |
-|   1:50-2:45 | Stump the experts part 2         | Room 409      | OnRamp Team    |
-|   2:45-3:00 | Plan to Keep your Momentum Going | Room 409      | Carrie Cargill |
-|   3:00-3:30 | Key takeaways & next steps       | Room 409      | OnRamp Team    |
+|   1:50-3:00 | Stump the experts part 2         | Room 409      | OnRamp Team    |
+|   3:00-3:15 | Plan to Keep your Momentum Going | Room 409      | Carrie Cargill |
+|   3:15-3:30 | Key takeaways & next steps       | Room 409      | OnRamp Team    |
 |   5:00-8:00 | After Party                      | TBD           |                |
 
 Make the most of your time at the PowerShell Summit by attending social events. These gatherings are
